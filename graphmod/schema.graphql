@@ -1,0 +1,22 @@
+type User {
+    id: String!,
+    name: String!,
+    email: String!,
+    pass: String!
+}
+
+input NewUser {
+    name: String!,
+    email: String!,
+    pass: String!
+}
+
+type Query {
+    user(limit: Int): [User!]!
+}
+
+type Mutation {
+    createUser(input: NewUser): User!
+}
+
+#user: denny515 pass: charanram
